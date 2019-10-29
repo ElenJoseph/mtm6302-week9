@@ -32,3 +32,22 @@ console.log($item.nextElementSibling)
 
 const $bread = document.querySelector ('li:nth-of-type(2)')
 console.log($bread)
+
+$list.innerHTML += '<li>Flour<li>'
+for (const fruit of fruits){
+    $list.innerHTML += `<li> ${fruit}<li>`
+}
+const $boxes = document.getElementById('boxes')
+const boxes =[]
+
+for (let i =0; i<1000;i++){
+     for (const color of colors){
+         boxes.push(`<div class="box" 
+         style ="background-color: ${color}" ></div>`)
+     }
+}
+//This is the proper way of inserting multiple things
+
+$boxes.innerHTML+=boxes.join('')
+
+$list.firstElementChild.insertAdjacentHTML('afterend', '<li>Juice</li>')
